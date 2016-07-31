@@ -1,10 +1,17 @@
 import click
+import re
 
 
 @click.command()
-@click.option('--as-cowboy', '-c', is_flag=True, help='Greet as a cowboy.')
-@click.argument('name', default='world', required=False)
-def main(name, as_cowboy):
+@click.option('--phone-number', '-p', prompt="Phone Number",
+              help='Phone number to validate')
+def main(phone_number):
     """Validates phone number"""
-    greet = 'Howdy' if as_cowboy else 'Hello'
-    click.echo('{0}, {1}.'.format(greet, name))
+    if is_number_valid(phone_number):
+        print 'Valid'
+    else:
+        print 'Invalid'
+
+
+def is_number_valid(phone_number):
+    return re.match('^(0|\\+91)?[789]\\d{9}$', phone_number) is not None
