@@ -1,15 +1,11 @@
 # Phone Number Validator
 
-Validates phone number
+Validates Phone Number
 
 
 # Installation
 
-If you don't use `pipsi`, you're missing out.
-Here are [installation instructions](https://github.com/mitsuhiko/pipsi#readme).
-
-Simply run:
-
+    $ curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python
     $ pipsi install .
 
 
@@ -18,4 +14,3 @@ Simply run:
 To use it:
 
     $ phone_number_validator --help
-
