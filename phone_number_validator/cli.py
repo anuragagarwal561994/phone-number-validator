@@ -8,9 +8,9 @@ import re
 def main(phone_number):
     """Validates phone number"""
     if is_number_valid(phone_number):
-        print 'Valid'
+        print('Valid')
     else:
-        print 'Invalid'
+        print('Invalid')
 
 
 def is_number_valid(phone_number):
