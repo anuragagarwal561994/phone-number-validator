@@ -14,3 +14,7 @@ Validates Phone Number
 To use it:
 
     $ phone_number_validator --help
+    
+To test it:
+
+    $ tox
